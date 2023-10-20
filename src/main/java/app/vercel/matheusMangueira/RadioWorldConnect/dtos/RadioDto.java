@@ -1,7 +1,5 @@
 package app.vercel.matheusMangueira.RadioWorldConnect.dtos;
 
-import java.util.UUID;
-
 import org.hibernate.validator.constraints.Length;
 
 import app.vercel.matheusMangueira.RadioWorldConnect.model.RadioModel;
@@ -16,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RadioDto {
 
-   UUID id;
+   Long id;
 
    @NotBlank
    @Length(min = 3, max = 50)

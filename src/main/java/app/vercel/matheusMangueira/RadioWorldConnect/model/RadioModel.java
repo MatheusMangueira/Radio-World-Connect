@@ -1,10 +1,11 @@
 package app.vercel.matheusMangueira.RadioWorldConnect.model;
 
-import java.util.UUID;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -15,18 +16,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "tb_radio")
+@Entity(name = "radio")
+@Table(name = "radio")
 @EqualsAndHashCode(of = "id")
 public class RadioModel {
 
    @Id
-   @GeneratedValue(generator = "UUID")
-   private UUID id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
 
    @NotBlank
    private String name;
 
    @NotBlank
+   @Column(name = "url_radio")
    private String urlRadio;
 
    @NotBlank

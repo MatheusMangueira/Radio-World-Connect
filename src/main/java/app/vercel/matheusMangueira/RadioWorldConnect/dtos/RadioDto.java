@@ -23,7 +23,6 @@ public class RadioDto {
    @NotBlank
    String urlRadio;
 
-   @NotBlank
    String image;
 
    @NotNull

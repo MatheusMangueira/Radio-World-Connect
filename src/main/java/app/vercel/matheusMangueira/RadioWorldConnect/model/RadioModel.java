@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class RadioModel {
 
    @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
 
    @NotBlank
@@ -32,7 +32,6 @@ public class RadioModel {
    @Column(name = "url_radio")
    private String urlRadio;
 
-   @NotBlank
    private String image;
 
    @NotNull

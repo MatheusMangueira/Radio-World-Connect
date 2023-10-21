@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>app.vercel.matheusMangueira</groupId>
 	<artifactId>RadioWorldConnect</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>RadioWorldConnect</name>
 	<description>RadioWorldConnect</description>
 	<properties>

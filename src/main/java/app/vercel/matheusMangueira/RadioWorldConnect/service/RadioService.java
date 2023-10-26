@@ -2,6 +2,8 @@ package app.vercel.matheusMangueira.RadioWorldConnect.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import app.vercel.matheusMangueira.RadioWorldConnect.dtos.RadioDto;
@@ -35,8 +37,8 @@ public class RadioService {
       return all;
    }
 
-   public List<RadioModel> findAll() {
-      return radioRepository.findAll();
+   public Page<RadioModel> findAll(Pageable pageable) {
+      return radioRepository.findAll(pageable);
    }
 
    public void validadeSave(RadioDto radio) {
